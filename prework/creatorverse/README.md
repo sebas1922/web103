@@ -29,8 +29,9 @@ The following **optional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
+https://imgur.com/tMiygpF
 
-![Imgur](https://imgur.com/tMiygpF.gif)
+![Imgur](https://imgur.com/oXcJjil.gif)
 
 GIF created with ...  **imgur**
 <!-- Recommended tools:
