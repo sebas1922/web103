@@ -29,7 +29,7 @@ The following **optional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
-https://imgur.com/tMiygpF
+https://imgur.com/a/WcKjeXh
 
 ![Imgur](https://imgur.com/oXcJjil.gif)
 
