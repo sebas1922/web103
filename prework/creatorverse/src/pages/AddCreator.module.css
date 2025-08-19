@@ -1,0 +1,28 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--card-border);
+}
+
+.error {
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: rgba(255, 107, 107, 0.1);
+  border-radius: 4px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}

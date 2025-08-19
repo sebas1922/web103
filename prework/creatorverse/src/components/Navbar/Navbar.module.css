@@ -1,0 +1,81 @@
+.navbar {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--card-border);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brandLink {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.brandTitle {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.navLink.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.navLink.active:hover {
+  background: #45a049;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .navLinks {
+    gap: 1rem;
+  }
+  
+  .brandTitle {
+    font-size: 1.5rem;
+  }
+}

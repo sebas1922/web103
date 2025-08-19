@@ -1,0 +1,58 @@
+.creatorCard {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--card-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.creatorCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.creatorImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--card-border);
+}
+
+.creatorName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.creatorEmail {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.25rem;
+}
+
+.creatorPhone {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+}
+
+.creatorBio {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.creatorSocial {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.creatorSocial:hover {
+  text-decoration: underline;
+}
