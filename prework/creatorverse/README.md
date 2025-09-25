@@ -29,10 +29,10 @@ The following **optional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
+https://imgur.com/a/WcKjeXh
 
-????????<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Imgur](https://imgur.com/oXcJjil.gif)
 
-<!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  **imgur**
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
