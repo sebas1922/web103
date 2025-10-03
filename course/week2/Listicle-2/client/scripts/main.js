@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const carCardsHTML = cars.map(car => `
             <a href="/cars/${car.id}" class="card-link">
             <div class="car-card">
-                <img src="${car.imageURL}" alt="${car.make} ${car.model}" class="car-card__image">
+                <img src="${car.image_url}" alt="${car.make} ${car.model}" class="car-card__image">
                 <div class="car-card__content">
                     <h3 class="car-card__title">${car.year} ${car.make} ${car.model}</h3>
                     <p class="car-card__description">${car.description}</p>
@@ -19,18 +19,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Horsepower</span>
-                            <span class="spec-value">${car.horsepower} hp</span>
+                            <span class="spec-value">${car.horsepower} HP</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">Top Speed</span>
-                            <span class="spec-value">${car.topSpeed} mph</span>
+                            <span class="spec-value">${car.top_speed} mph</span>
                         </div>
                         <div class="spec-item">
                             <span class="spec-label">MSRP</span>
                             <span class="spec-value">$${car.price.toLocaleString()}</span>
                         </div>
                     </div>
-                    <p class="car-card__fun-fact">${car.funFact}</p>
+                    <p class="car-card__fun-fact">${car.fun_fact}</p>
                 </div>
             </div>
             </a>

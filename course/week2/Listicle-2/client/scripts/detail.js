@@ -22,20 +22,20 @@ document.addEventListener('DOMContentLoaded', async () => {
         // 5. Build the detailed HTML
         detailContainer.innerHTML = `
             <div class="car-detail">
-                <img src="${car.imageURL}" alt="${car.make} ${car.model}" class="car-detail__image">
+                <img src="${car.image_url}" alt="${car.make} ${car.model}" class="car-detail__image">
                 <h1 class="car-detail__title">${car.year} ${car.make} ${car.model}</h1>
                 <p class="car-detail__description">${car.description}</p>
                 <div class="car-detail__specs">
                     <h2>Specifications</h2>
                     <p><strong>Engine:</strong> ${car.engine}</p>
-                    <p><strong>Horsepower:</strong> ${car.horsepower} hp</p>
-                    <p><strong>Top Speed:</strong> ${car.topSpeed} mph</p>
+                    <p><strong>Horsepower:</strong> ${car.horsepower} HP</p>
+                    <p><strong>Top Speed:</strong> ${car.top_speed} mph</p>
                     <p><strong>Drivetrain:</strong> ${car.drivetrain}</p>
                     <p><strong>MSRP:</strong> $${car.price.toLocaleString()}</p>
                 </div>
                 <div class="car-detail__fun-fact">
                     <h3>Fun Fact</h3>
-                    <p>${car.funFact}</p>
+                    <p>${car.fun_fact}</p>
                 </div>
             </div>
         `;
