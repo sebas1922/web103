@@ -1,0 +1,194 @@
+.event-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Status-based styling */
+.event-card.upcoming {
+  border-color: var(--status-upcoming);
+}
+
+.event-card.upcoming:hover {
+  box-shadow: 0 20px 40px rgba(6, 182, 212, 0.4);
+}
+
+.event-card.now {
+  border-color: var(--status-now);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.event-card.now:hover {
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.6);
+}
+
+.event-card.past {
+  border-color: var(--status-past);
+  opacity: 0.7;
+}
+
+.event-card.past:hover {
+  opacity: 0.85;
+  box-shadow: 0 20px 40px rgba(239, 68, 68, 0.3);
+}
+
+.event-card.past .event-image {
+  filter: grayscale(50%);
+}
+
+/* Event Image */
+.event-image {
+  position: relative;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+.event-card:hover .event-image {
+  transform: scale(1.05);
+}
+
+.event-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 15, 0.2) 0%,
+    rgba(10, 10, 15, 0.8) 100%
+  );
+}
+
+/* Status Badge */
+.status-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  text-shadow: 0 0 10px currentColor;
+}
+
+.status-badge.upcoming {
+  background: rgba(6, 182, 212, 0.3);
+  color: var(--status-upcoming);
+  border: 1px solid var(--status-upcoming);
+}
+
+.status-badge.now {
+  background: rgba(16, 185, 129, 0.3);
+  color: var(--status-now);
+  border: 1px solid var(--status-now);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.status-badge.past {
+  background: rgba(239, 68, 68, 0.3);
+  color: var(--status-past);
+  border: 1px solid var(--status-past);
+}
+
+/* Event Content */
+.event-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.event-artist {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+/* Event Details (shown on hover) */
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.event-details.visible {
+  opacity: 1;
+  max-height: 200px;
+}
+
+.event-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: rgba(10, 10, 15, 0.5);
+  border-radius: 6px;
+  border-left: 3px solid var(--neon-purple);
+}
+
+.info-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.info-value {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  text-align: right;
+}
+
+.event-countdown {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.8);
+  }
+}
+

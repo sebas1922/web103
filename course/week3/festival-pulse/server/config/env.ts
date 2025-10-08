@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 
 // Load environment variables from .env file.
 // This should be the first thing to run.
-dotenv.config();
+dotenv.config({quiet: true});
 
 /**
  * A helper function to safely get environment variables.
@@ -15,7 +15,8 @@ dotenv.config();
 function getEnv(key: string): string {
   const value = process.env[key];
   if (value === undefined || value === null) {
-    throw new Error(`FATAL: Environment variable "${key}" is not defined.`);
+    console.log(`FATAL: Environment variable ${key} is not defined.`);
+    process.exit(1);
   }
   return value;
 }
@@ -31,7 +32,7 @@ function getEnvAsInt(key: string): number {
     const value = getEnv(key);
     const parsed = parseInt(value, 10);
     if (isNaN(parsed)) {
-        throw new Error(`FATAL: Environment variable "${key}" is not a valid integer. Value: "${value}"`);
+        throw new Error(`FATAL: Environment variable ${key} is not a valid integer. Value: "${value}"`);
     }
     return parsed;
 }
@@ -42,11 +43,12 @@ function getEnvAsInt(key: string): number {
 const config = {
   NODE_ENV: getEnv('NODE_ENV'),
   PORT: getEnvAsInt('PORT'),
-  DATABASE_URL: getEnv('DATABASE_URL'),
-  POSTGRES_USER: getEnv('POSTGRES_USER'),
-  POSTGRES_PASSWORD: getEnv('POSTGRES_PASSWORD'),
-  POSTGRES_DB: getEnv('POSTGRES_DB'),
-  POSTGRES_HOST: getEnv('POSTGRES_HOST'),
+  DB_USER: getEnv('DB_USER'),
+  DB_PASSWORD: getEnv('DB_PASSWORD'),
+  DB_NAME: getEnv('DB_NAME'),
+  DB_HOST: getEnv('DB_HOST'),
+  DB_PORT: getEnvAsInt('DB_PORT'),
+  DB_URL: getEnv('DB_URL')
 };
 
 // Freeze the config object to make it immutable. This prevents
